@@ -1,0 +1,107 @@
+html{
+    font-family: Arial, sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    float: left;
+    padding-right: 10px;
+}
+
+a {
+    color: black;
+    text-decoration: none ;
+}
+a:hover {
+    text-decoration: underline ;
+}
+.apps:hover{
+   border-radius: 50%;
+   background-color: gray;
+   box-shadow: 0 0 2px  grey;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: 40vh 1fr auto;
+    grid-template-areas: 
+    "topleft topcenter topright"
+    ". midle ."
+    "botleft botcenter botright" ;
+}
+
+.icon {
+    height: 20px;
+    width: 20px;
+}
+
+.float-left {
+    grid-area: topleft;
+}
+
+.float-right {
+    grid-area: topright;
+}
+
+.topcenter {
+    grid-area: topcenter;
+    align-self: end;
+}
+
+.midle {
+    grid-area: midle;
+    margin-top: 30px;
+}
+
+.profile {
+    width: 30px;
+    height: 30px;
+    border-radius: 60%;
+}
+
+.profile:hover {
+    box-shadow: 0 0 2px 2px grey;
+}
+
+.shadow {
+    
+    width: 30%;
+    height: 30px;
+    border: gray solid 1px;
+    border-radius: 20px;
+}
+
+.shadow:hover {
+    box-shadow: 0 0 1px 1px grey;
+}
+
+#searchbar {
+    padding: 0;
+    border : 0;
+    width: 80%;
+}
+
+[type='submit'] {
+    height: 30px;
+    font-size: 16px;
+    margin-right: 40px;
+    font-family: Arial, sans-serif;
+}
+
+[type='submit']:hover {
+    box-shadow: 0 0 1px 1px grey;
+
+}
+[type='button'] {
+    height: 30px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+[type='button']:hover {
+    box-shadow: 0 0 1px 1px grey;
+}
