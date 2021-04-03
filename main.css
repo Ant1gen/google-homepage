@@ -2,22 +2,31 @@ html{
     font-family: Arial, sans-serif;
 }
 
-ul {
-    list-style-type: none;
-}
-
-li {
-    float: left;
-    padding-right: 10px;
-}
-
 a {
     color: black;
     text-decoration: none ;
+    padding-right: 20px;
 }
 a:hover {
     text-decoration: underline ;
 }
+footer {
+    display: flex;
+    align-items: center;
+    background-color: #f2f2f2;
+    grid-area: footer;
+    padding-left: 20px;
+}
+
+.foot {
+    color: gray;
+}
+
+.apps {
+    height: 25px;
+    width: 25px;
+}
+
 .apps:hover{
    border-radius: 50%;
    background-color: gray;
@@ -25,26 +34,32 @@ a:hover {
 }
 
 .container {
+    height: 100vh;
     display: grid;
     grid-template-columns: auto 1fr auto;
-    grid-template-rows: 40vh 1fr auto;
+    grid-template-rows: 50px 40vh auto 50px;
     grid-template-areas: 
-    "topleft topcenter topright"
+    "topleft . topright"
+    ". topcenter ."
     ". midle ."
-    "botleft botcenter botright" ;
+    "footer footer footer" ;
 }
 
 .icon {
-    height: 20px;
-    width: 20px;
+    height: 25px;
+    width: 25px;
+    padding-left: 5px;
 }
 
 .float-left {
     grid-area: topleft;
+    padding-top: 25px;
+    padding-left: 20px;
 }
 
 .float-right {
     grid-area: topright;
+    
 }
 
 .topcenter {
@@ -58,9 +73,11 @@ a:hover {
 }
 
 .profile {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     border-radius: 60%;
+    position: relative;
+    top: 20px;
 }
 
 .profile:hover {
@@ -68,9 +85,11 @@ a:hover {
 }
 
 .shadow {
-    
-    width: 30%;
-    height: 30px;
+    display: flex;
+    align-items: center;
+    grid-template-columns: 25px auto;
+    width: 35vw;
+    height: 40px;
     border: gray solid 1px;
     border-radius: 20px;
 }
@@ -82,10 +101,22 @@ a:hover {
 #searchbar {
     padding: 0;
     border : 0;
-    width: 80%;
+    width: 90%;
+}
+
+#searchbar:focus-visible {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    height: 30px;
 }
 
 [type='submit'] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 1px solid grey;
+    border-radius: 3px;
+    background-color: white;
     height: 30px;
     font-size: 16px;
     margin-right: 40px;
@@ -97,9 +128,15 @@ a:hover {
 
 }
 [type='button'] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 1px solid grey;
+    border-radius: 3px;
+    background-color: white;
     height: 30px;
     font-size: 16px;
     font-family: Arial, sans-serif;
+    
 }
 
 [type='button']:hover {
